@@ -19,6 +19,14 @@ I build software that connects computers and devices, from data acquisition and 
 - **Device connectivity** — Serial communication, BLE GATT / HID, MODBUS RTU, sensor data acquisition, and hardware–software integration.
 - **Engineering tools** — Python automation, MCP integrations, and checks between schematic connections and firmware pin assignments.
 
+### Current focus
+
+Connecting device and firmware workflows with AI agent tools: structured hardware context through MCP, Python SDK integration, and explicit handling of uncertain results. I am exploring typed decision models for routing and operational triage; I have not yet benchmarked Jev on device data.
+
+### Open-source contributions
+
+- **TypeSafe Python SDK — HTTP/2 documentation:** prepared sync/async client examples with concurrent-request lifecycle checks. [Patch](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [Upstream discussion](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291). Submitted for maintainer consideration; not yet merged. Validation used offline fixtures and a local HTTP server, not live Jev benchmarks.
+
 ### Selected public projects
 
 #### [BLE Helper](https://github.com/vonpanda/BLE_Helper)
@@ -59,6 +67,14 @@ These repositories preserve early learning implementations for code reading and 
 - **桌面软件** — Qt / PyQt 界面、设备状态监控、Windows 设备输入处理与跨平台打包。
 - **设备通信** — 串口、BLE GATT / HID、MODBUS RTU、传感器数据采集与软硬件联调。
 - **工程工具** — Python 自动化、MCP 集成、原理图连接与固件引脚映射检查。
+
+### 当前关注
+
+连接设备与固件工作流和 AI Agent 工具：通过 MCP 提供结构化硬件上下文，开发 Python SDK 集成，并明确处理不确定结果。目前正在探索类型化决策模型在路由和运维分流中的应用，尚未在设备数据上完成 Jev 基准评测。
+
+### 开源贡献
+
+- **TypeSafe Python SDK — HTTP/2 文档：** 准备了同步、异步客户端示例，并检查并发请求的连接生命周期。[补丁](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [上游讨论](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291)。已提交供维护者考虑，尚未合并。验证使用离线样本和本机 HTTP 服务，不代表真实 Jev 性能测试。
 
 ### 精选公开项目
 
