@@ -25,6 +25,7 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 
 ### Open-source contributions
 
+- **PyModbus — async serial reliability:** fixed a case where zero-byte serial writes could discard queued RTU frames, and added regression tests for partial and zero-byte writes. [PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) was merged into `dev` on September 23, 2026.
 - **TypeSafe Python SDK — HTTP/2 documentation:** prepared sync/async client examples with concurrent-request lifecycle checks. [Patch](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [Upstream discussion](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291). Submitted for maintainer consideration; not yet merged. Validation used offline fixtures and a local HTTP server, not live Jev benchmarks.
 
 ### Selected public projects
@@ -74,6 +75,7 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 开源贡献
 
+- **PyModbus — 异步串口可靠性：** 修复串口写入返回零字节时可能丢弃待发送 RTU 帧的问题，并补充部分写入与零字节写入的回归测试。[PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) 已于 2026 年 9 月 23 日合并至 `dev` 分支。
 - **TypeSafe Python SDK — HTTP/2 文档：** 准备了同步、异步客户端示例，并检查并发请求的连接生命周期。[补丁](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [上游讨论](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291)。已提交供维护者考虑，尚未合并。验证使用离线样本和本机 HTTP 服务，不代表真实 Jev 性能测试。
 
 ### 精选公开项目
