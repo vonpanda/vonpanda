@@ -25,8 +25,9 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 
 ### Open-source contributions
 
+- **Stack-chan — Blockly editor readability:** corrected the dark-mode toolbox label selector and added browser checks for labels before selection, while selected, and after deselection in both themes. [PR #704](https://github.com/stack-chan/stack-chan/pull/704) was merged on September 25, 2026.
+- **ESPHome Device Builder — firmware install flow:** contributed handled-warning detection and end-to-end coverage showing that a successful compile releases its dependent OTA upload. The maintainer added ANSI-prefix handling before [PR #2828](https://github.com/esphome/device-builder/pull/2828) was merged on September 25, 2026.
 - **PyModbus — async serial reliability:** fixed a case where zero-byte serial writes could discard queued RTU frames, and added regression tests for partial and zero-byte writes. [PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) was merged into `dev` on September 23, 2026.
-- **TypeSafe Python SDK — HTTP/2 documentation:** prepared sync/async client examples with concurrent-request lifecycle checks. [Patch](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [Upstream discussion](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291). Submitted for maintainer consideration; not yet merged. Validation used offline fixtures and a local HTTP server, not live Jev benchmarks.
 
 ### Selected public projects
 
@@ -75,8 +76,9 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 开源贡献
 
+- **Stack-chan — Blockly 编辑器可读性：** 修正深色模式下工具箱分类标签的选择器，并增加明暗主题中未选中、选中及取消选中状态的浏览器检查。[PR #704](https://github.com/stack-chan/stack-chan/pull/704) 已于 2026 年 9 月 25 日合并。
+- **ESPHome Device Builder — 固件安装流程：** 参与修复已处理警告导致编译误判失败的问题，并补充成功编译后继续 OTA 上传的端到端测试。维护者在合并前又补充了 ANSI 前缀处理；[PR #2828](https://github.com/esphome/device-builder/pull/2828) 已于 2026 年 9 月 25 日合并。
 - **PyModbus — 异步串口可靠性：** 修复串口写入返回零字节时可能丢弃待发送 RTU 帧的问题，并补充部分写入与零字节写入的回归测试。[PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) 已于 2026 年 9 月 23 日合并至 `dev` 分支。
-- **TypeSafe Python SDK — HTTP/2 文档：** 准备了同步、异步客户端示例，并检查并发请求的连接生命周期。[补丁](https://github.com/typesafe-ai/typesafe-sdk-python/compare/main...vonpanda:typesafe-sdk-python:docs/http2-client-examples) · [上游讨论](https://github.com/typesafe-ai/typesafe-sdk-python/issues/10#issuecomment-5773539291)。已提交供维护者考虑，尚未合并。验证使用离线样本和本机 HTTP 服务，不代表真实 Jev 性能测试。
 
 ### 精选公开项目
 
