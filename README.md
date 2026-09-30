@@ -25,6 +25,7 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 
 ### Open-source contributions
 
+- **ESPHome — hostname resolution:** prevented empty CLI address-cache entries from being treated as resolved addresses, so DNS and mDNS fallback still runs. Added regression tests for empty entries, duplicate mappings, and both resolution paths. [PR #19924](https://github.com/esphome/esphome/pull/19924) was merged into `dev` on September 30, 2026.
 - **ESPHome — non-root build cache:** fixed an unwritable ccache path in non-root containers by registering the PlatformIO cache with ESPHome's cache management and keeping `clean-all` effective. Added coverage for cache location and cleanup, and validated an affected Docker build. [PR #19807](https://github.com/esphome/esphome/pull/19807) was merged on September 28, 2026.
 - **Stack-chan — Blockly editor readability:** corrected the dark-mode toolbox label selector and added browser checks for labels before selection, while selected, and after deselection in both themes. [PR #704](https://github.com/stack-chan/stack-chan/pull/704) was merged on September 25, 2026.
 - **ESPHome Device Builder — firmware install flow:** contributed handled-warning detection and end-to-end coverage showing that a successful compile releases its dependent OTA upload. The maintainer added ANSI-prefix handling before [PR #2828](https://github.com/esphome/device-builder/pull/2828) was merged on September 25, 2026.
@@ -77,6 +78,7 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 开源贡献
 
+- **ESPHome — 主机名解析：** 修复空的命令行地址缓存条目被误判为已解析地址的问题，使 DNS 和 mDNS 仍能正常回退解析；补充空条目、重复映射及两类解析路径的回归测试。[PR #19924](https://github.com/esphome/esphome/pull/19924) 已于 2026 年 9 月 30 日合并至 `dev` 分支。
 - **ESPHome — 非 root 构建缓存：** 修复非 root 容器中 ccache 路径不可写的问题，将 PlatformIO 编译缓存纳入 ESPHome 的缓存管理，并保持 `clean-all` 的清理能力。补充缓存路径与清理测试，并用受影响的 Docker 构建方式验证。[PR #19807](https://github.com/esphome/esphome/pull/19807) 已于 2026 年 9 月 28 日合并。
 - **Stack-chan — Blockly 编辑器可读性：** 修正深色模式下工具箱分类标签的选择器，并增加明暗主题中未选中、选中及取消选中状态的浏览器检查。[PR #704](https://github.com/stack-chan/stack-chan/pull/704) 已于 2026 年 9 月 25 日合并。
 - **ESPHome Device Builder — 固件安装流程：** 参与修复已处理警告导致编译误判失败的问题，并补充成功编译后继续 OTA 上传的端到端测试。维护者在合并前又补充了 ANSI 前缀处理；[PR #2828](https://github.com/esphome/device-builder/pull/2828) 已于 2026 年 9 月 25 日合并。
