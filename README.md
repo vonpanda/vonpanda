@@ -25,6 +25,9 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 
 ### Open-source contributions
 
+- **cantools — generated unsigned C encoders:** defined negative raw-value handling by clamping to zero, avoiding undefined floating-point-to-unsigned conversion for values such as `-1.0`. Added generated-C regression coverage for scaling, rounding, and multiple signal widths. [PR #841](https://github.com/cantools/cantools/pull/841) was merged in October 2026.
+- **cantools — generated C comments:** escaped DBC comment delimiters that could break generated C headers, with regression coverage for message and signal comments. [PR #840](https://github.com/cantools/cantools/pull/840) was merged in October 2026.
+- **ESPHome — serial logging reset:** parsed `ESPHOME_SERIAL_LOGGING_RESET` as a boolean for both `logs` and `run`, so `false` and `0` no longer enable reset. Added regression cases for the environment setting and CLI override. [PR #19963](https://github.com/esphome/esphome/pull/19963) was merged into `dev` in October 2026.
 - **ESPHome — hostname resolution:** prevented empty CLI address-cache entries from being treated as resolved addresses, so DNS and mDNS fallback still runs. Added regression tests for empty entries, duplicate mappings, and both resolution paths. [PR #19924](https://github.com/esphome/esphome/pull/19924) was merged into `dev` on September 30, 2026.
 - **ESPHome — non-root build cache:** fixed an unwritable ccache path in non-root containers by registering the PlatformIO cache with ESPHome's cache management and keeping `clean-all` effective. Added coverage for cache location and cleanup, and validated an affected Docker build. [PR #19807](https://github.com/esphome/esphome/pull/19807) was merged on September 28, 2026.
 - **Stack-chan — Blockly editor readability:** corrected the dark-mode toolbox label selector and added browser checks for labels before selection, while selected, and after deselection in both themes. [PR #704](https://github.com/stack-chan/stack-chan/pull/704) was merged on September 25, 2026.
@@ -78,6 +81,9 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 开源贡献
 
+- **cantools — 无符号 C 编码器：** 将负的原始值明确处理为零，避免 `-1.0` 等浮点值直接转无符号整数时出现未定义行为；补充缩放、取整和不同信号位宽的生成 C 代码回归测试。[PR #841](https://github.com/cantools/cantools/pull/841) 已于 2026 年 10 月合并。
+- **cantools — 生成 C 注释：** 转义 DBC 注释中的 C 注释定界符，避免生成的头文件被破坏；补充消息和信号注释的回归测试。[PR #840](https://github.com/cantools/cantools/pull/840) 已于 2026 年 10 月合并。
+- **ESPHome — 串口日志复位：** 在 `logs` 和 `run` 命令中将 `ESPHOME_SERIAL_LOGGING_RESET` 正确解析为布尔值，使 `false` 和 `0` 不再触发复位；补充环境变量和命令行覆盖的回归测试。[PR #19963](https://github.com/esphome/esphome/pull/19963) 已于 2026 年 10 月合并至 `dev` 分支。
 - **ESPHome — 主机名解析：** 修复空的命令行地址缓存条目被误判为已解析地址的问题，使 DNS 和 mDNS 仍能正常回退解析；补充空条目、重复映射及两类解析路径的回归测试。[PR #19924](https://github.com/esphome/esphome/pull/19924) 已于 2026 年 9 月 30 日合并至 `dev` 分支。
 - **ESPHome — 非 root 构建缓存：** 修复非 root 容器中 ccache 路径不可写的问题，将 PlatformIO 编译缓存纳入 ESPHome 的缓存管理，并保持 `clean-all` 的清理能力。补充缓存路径与清理测试，并用受影响的 Docker 构建方式验证。[PR #19807](https://github.com/esphome/esphome/pull/19807) 已于 2026 年 9 月 28 日合并。
 - **Stack-chan — Blockly 编辑器可读性：** 修正深色模式下工具箱分类标签的选择器，并增加明暗主题中未选中、选中及取消选中状态的浏览器检查。[PR #704](https://github.com/stack-chan/stack-chan/pull/704) 已于 2026 年 9 月 25 日合并。
