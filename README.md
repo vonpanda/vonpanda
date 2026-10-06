@@ -25,6 +25,7 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 
 ### Open-source contributions
 
+- **opcua-asyncio — OPC UA browse references:** restored `TypeDefinition` when an Object or Variable reference is removed and added again. Added regression coverage for forward and inverse browse results. [PR #2043](https://github.com/FreeOpcUa/opcua-asyncio/pull/2043) was merged in October 2026.
 - **cantools — generated unsigned C encoders:** defined negative raw-value handling by clamping to zero, avoiding undefined floating-point-to-unsigned conversion for values such as `-1.0`. Added generated-C regression coverage for scaling, rounding, and multiple signal widths. [PR #841](https://github.com/cantools/cantools/pull/841) was merged in October 2026.
 - **cantools — generated C comments:** escaped DBC comment delimiters that could break generated C headers, with regression coverage for message and signal comments. [PR #840](https://github.com/cantools/cantools/pull/840) was merged in October 2026.
 - **ESPHome — serial logging reset:** parsed `ESPHOME_SERIAL_LOGGING_RESET` as a boolean for both `logs` and `run`, so `false` and `0` no longer enable reset. Added regression cases for the environment setting and CLI override. [PR #19963](https://github.com/esphome/esphome/pull/19963) was merged into `dev` in October 2026.
@@ -81,6 +82,7 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 开源贡献
 
+- **opcua-asyncio — OPC UA 浏览引用：** 修复对象或变量的引用删除后重新添加时，浏览结果丢失 `TypeDefinition` 的问题；补充正向和反向浏览结果的回归测试。[PR #2043](https://github.com/FreeOpcUa/opcua-asyncio/pull/2043) 已于 2026 年 10 月合并。
 - **cantools — 无符号 C 编码器：** 将负的原始值明确处理为零，避免 `-1.0` 等浮点值直接转无符号整数时出现未定义行为；补充缩放、取整和不同信号位宽的生成 C 代码回归测试。[PR #841](https://github.com/cantools/cantools/pull/841) 已于 2026 年 10 月合并。
 - **cantools — 生成 C 注释：** 转义 DBC 注释中的 C 注释定界符，避免生成的头文件被破坏；补充消息和信号注释的回归测试。[PR #840](https://github.com/cantools/cantools/pull/840) 已于 2026 年 10 月合并。
 - **ESPHome — 串口日志复位：** 在 `logs` 和 `run` 命令中将 `ESPHOME_SERIAL_LOGGING_RESET` 正确解析为布尔值，使 `false` 和 `0` 不再触发复位；补充环境变量和命令行覆盖的回归测试。[PR #19963](https://github.com/esphome/esphome/pull/19963) 已于 2026 年 10 月合并至 `dev` 分支。
