@@ -21,10 +21,11 @@ I build software that connects computers and devices, from data acquisition and 
 
 ### Current focus
 
-Connecting device and firmware workflows with AI agent tools: structured hardware context through MCP, Python SDK integration, and explicit handling of uncertain results. I am exploring typed decision models for routing and operational triage; I have not yet benchmarked Jev on device data.
+My current work includes AI agent tooling and document-processing pipelines: a Go search integration for RAGFlow and page-scoped export fixes for Docling Core, both submitted as open PRs. I also connect device and firmware workflows to developer tools through MCP and Python SDK integration.
 
 ### Open-source contributions
 
+- **Stack-chan — Web simulator startup:** moved the 30-second readiness timeout to application launch, so leaving startup settings open no longer produces a false startup error. Added restart and stalled-launch regression tests. [PR #718](https://github.com/stack-chan/stack-chan/pull/718) was merged on October 14, 2026.
 - **opcua-asyncio — OPC UA browse references:** restored `TypeDefinition` when an Object or Variable reference is removed and added again. Added regression coverage for forward and inverse browse results. [PR #2043](https://github.com/FreeOpcUa/opcua-asyncio/pull/2043) was merged in October 2026.
 - **cantools — generated unsigned C encoders:** defined negative raw-value handling by clamping to zero, avoiding undefined floating-point-to-unsigned conversion for values such as `-1.0`. Added generated-C regression coverage for scaling, rounding, and multiple signal widths. [PR #841](https://github.com/cantools/cantools/pull/841) was merged in October 2026.
 - **cantools — generated C comments:** escaped DBC comment delimiters that could break generated C headers, with regression coverage for message and signal comments. [PR #840](https://github.com/cantools/cantools/pull/840) was merged in October 2026.
@@ -34,6 +35,11 @@ Connecting device and firmware workflows with AI agent tools: structured hardwar
 - **Stack-chan — Blockly editor readability:** corrected the dark-mode toolbox label selector and added browser checks for labels before selection, while selected, and after deselection in both themes. [PR #704](https://github.com/stack-chan/stack-chan/pull/704) was merged on September 25, 2026.
 - **ESPHome Device Builder — firmware install flow:** contributed handled-warning detection and end-to-end coverage showing that a successful compile releases its dependent OTA upload. The maintainer added ANSI-prefix handling before [PR #2828](https://github.com/esphome/device-builder/pull/2828) was merged on September 25, 2026.
 - **PyModbus — async serial reliability:** fixed a case where zero-byte serial writes could discard queued RTU frames, and added regression tests for partial and zero-byte writes. [PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) was merged into `dev` on September 23, 2026.
+
+### Upstream work in review
+
+- **RAGFlow — Go agent search integration:** [PR #21038](https://github.com/infiniflow/ragflow/pull/21038) adds the You.com search path for Agent and Canvas workflows, including exact JSON-number preservation and focused regression tests. **Open PR.**
+- **Docling Core — page-scoped document export:** [PR #852](https://github.com/docling-project/docling-core/pull/852) preserves inline content and location data through page filtering and export, with regression coverage. **Open PR.**
 
 ### Selected public projects
 
@@ -78,10 +84,11 @@ These repositories preserve early learning implementations for code reading and 
 
 ### 当前关注
 
-连接设备与固件工作流和 AI Agent 工具：通过 MCP 提供结构化硬件上下文，开发 Python SDK 集成，并明确处理不确定结果。目前正在探索类型化决策模型在路由和运维分流中的应用，尚未在设备数据上完成 Jev 基准评测。
+目前的工作包括 AI Agent 工具与文档处理流程：已向 RAGFlow 提交 Go 搜索集成 PR，向 Docling Core 提交按页导出修复 PR，两者均尚未合并。同时通过 MCP 和 Python SDK 集成，将设备与固件工作流接入开发工具。
 
 ### 开源贡献
 
+- **Stack-chan — Web 模拟器启动：** 将 30 秒就绪超时改为从应用启动阶段开始计时，避免启动设置界面保持打开时误报启动失败；补充重启和启动停滞的回归测试。[PR #718](https://github.com/stack-chan/stack-chan/pull/718) 已于 2026 年 10 月 14 日合并。
 - **opcua-asyncio — OPC UA 浏览引用：** 修复对象或变量的引用删除后重新添加时，浏览结果丢失 `TypeDefinition` 的问题；补充正向和反向浏览结果的回归测试。[PR #2043](https://github.com/FreeOpcUa/opcua-asyncio/pull/2043) 已于 2026 年 10 月合并。
 - **cantools — 无符号 C 编码器：** 将负的原始值明确处理为零，避免 `-1.0` 等浮点值直接转无符号整数时出现未定义行为；补充缩放、取整和不同信号位宽的生成 C 代码回归测试。[PR #841](https://github.com/cantools/cantools/pull/841) 已于 2026 年 10 月合并。
 - **cantools — 生成 C 注释：** 转义 DBC 注释中的 C 注释定界符，避免生成的头文件被破坏；补充消息和信号注释的回归测试。[PR #840](https://github.com/cantools/cantools/pull/840) 已于 2026 年 10 月合并。
@@ -91,6 +98,11 @@ These repositories preserve early learning implementations for code reading and 
 - **Stack-chan — Blockly 编辑器可读性：** 修正深色模式下工具箱分类标签的选择器，并增加明暗主题中未选中、选中及取消选中状态的浏览器检查。[PR #704](https://github.com/stack-chan/stack-chan/pull/704) 已于 2026 年 9 月 25 日合并。
 - **ESPHome Device Builder — 固件安装流程：** 参与修复已处理警告导致编译误判失败的问题，并补充成功编译后继续 OTA 上传的端到端测试。维护者在合并前又补充了 ANSI 前缀处理；[PR #2828](https://github.com/esphome/device-builder/pull/2828) 已于 2026 年 9 月 25 日合并。
 - **PyModbus — 异步串口可靠性：** 修复串口写入返回零字节时可能丢弃待发送 RTU 帧的问题，并补充部分写入与零字节写入的回归测试。[PR #3032](https://github.com/pymodbus-dev/pymodbus/pull/3032) 已于 2026 年 9 月 23 日合并至 `dev` 分支。
+
+### 审查中的上游贡献
+
+- **RAGFlow — Go Agent 搜索集成：** [PR #21038](https://github.com/infiniflow/ragflow/pull/21038) 为 Agent 和 Canvas 工作流补上 You.com 搜索路径，保留 JSON 数值精度，并加入针对性回归测试。**PR 尚未合并。**
+- **Docling Core — 按页导出文档：** [PR #852](https://github.com/docling-project/docling-core/pull/852) 修复按页过滤和导出时内联内容及位置信息丢失的问题，并补充回归测试。**PR 尚未合并。**
 
 ### 精选公开项目
 
